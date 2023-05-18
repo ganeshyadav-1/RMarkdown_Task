@@ -1,0 +1,65 @@
+---
+title: "IPL"
+author: "Ganesh"
+date: "`r Sys.Date()`"
+output:
+  pdf_document: default
+  html_document: default
+---
+<h1 style="text-align:center; color:Green; font-size:36px; font-family:Arial, sans-serif;">**INDIAN PREMIER LEAGUE**</h1>
+
+
+<h2 style="color:Navy; font-size:30px; font-family:Georgia, sans-serif;">**Information**</h2>
+
+- Indian Premier League consists of a total of 10 teams.
+- The team names are mentioned below:
+  - Chennai Super Kings
+  - Mumbai Indians
+  - Royal Challengers Bangalore
+  - Sunrisers Hyderabad
+  - Rajasthan Royals
+  - Delhi Capitals
+  - Kolkata Knight Riders
+  - Kings XI Punjab
+  - Lucknow Super Giants
+  - Gujarat Titans
+- IPL has completed successfully 15 years and is currently in its 16th edition.
+
+<h2 style="color:Navy; font-size:30px; font-family:Georgia, sans-serif;">**Some Things To Remember in IPL**</h2>
+
+- Compared to all the teams, there is a huge fanbase for Chennai Super Kings, Mumbai Indians, and Royal Challengers Bangalore.
+- The team which appeared more times in the playoffs is Chennai Super Kings (CSK).
+- The team which won more times the IPL trophy is Mumbai Indians (MI) which is 5 times.
+- The team which set the record for the highest score is Royal Challengers Bangalore (RCB).
+- The team which set the record for the lowest score is Royal Challengers Bangalore (RCB).
+- The highest individual score in an IPL  by a player named "Chris Gayle" from Royal Challengers Bangalore (RCB).
+
+```{r setup, include=FALSE} 
+knitr::opts_chunk$set(warning = FALSE, message = FALSE) 
+```
+
+
+## **Table View of the IPL winners List**
+```{r , echo = FALSE,warning=FALSE}
+require(knitr)
+data <- read.csv("C://Users//FL_LPT-194//Documents//R//Download_button_Task//IPL_winners.csv")
+kable(data)
+
+```
+
+## **Graphical Representation  of the above dataset**
+```{r , echo = FALSE,warning=FALSE}
+require(ggplot2)
+ggplot(data, aes(x = YEAR, y = WINNERS)) +
+  geom_point(size = 2) +
+  labs(x = "Year", y = "Winners") +
+  ggtitle("IPL Winners Scatter Plot")
+
+
+```
+
+
+
+
+
+
